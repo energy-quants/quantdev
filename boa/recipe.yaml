@@ -1,5 +1,5 @@
 context:
-  version: 2022.7.11
+  version: 2023.7.25
   name: quantdev
 
 package:
@@ -15,8 +15,8 @@ requirements:
     - adlfs                                   >=2023.4.0    # https://github.com/dask/adlfs
     - aioguest                                >=0.1.0       # https://github.com/conda-forge/aioguest-feedstock
     - altair                                  >=5.0.1       # https://github.com/altair-viz/altair
-    - anyio                                   >=3.6.2       # https://github.com/conda-forge/anyio-feedstock
-    - anywidget                               >=0.6.2       # [jupyter] https://github.com/manzt/anywidget  # [UPDATE]
+    - anyio                                   >=3.7.1       # https://github.com/conda-forge/anyio-feedstock
+    - anywidget                               >=0.6.2       # [jupyter] https://github.com/manzt/anywidget
     - arch-py                                 >=6.1.0       # https://github.com/conda-forge/arch-py-feedstock
     - arviz                                   >=0.16.0      # https://github.com/arviz-devs/arviz
     - astropy                                 >=5.3.1       # https://github.com/astropy/astropy
@@ -32,12 +32,13 @@ requirements:
     - azure-storage-blob                      >=12.17.0     # https://github.com/conda-forge/azure-storage-blob-feedstock
     - azure-storage-file-datalake             >=12.12.0     # https://github.com/conda-forge/azure-storage-file-datalake-feedstock
     - azure-storage-file-share                >=12.10.1     # https://github.com/conda-forge/azure-storage-file-share-feedstock
-    - balance                                 >=0.9.0       # https://github.com/conda-forge/balance-feedstock
+    # https://github.com/facebookresearch/balance/pull/64
+    # [seaborn<=0.11.1] - balance                                 >=0.9.0       # https://github.com/conda-forge/balance-feedstock
     - bambi                                   >=0.12.0      # https://github.com/bambinos/bambi
     - bat                                     >=0.23.0      # https://github.com/conda-forge/bat-feedstock
     - beautifulsoup4                          >=4.12.2      # https://github.com/conda-forge/beautifulsoup4-feedstock
     - bitarray                                >=2.7.6       # https://github.com/ilanschnell/bitarray
-    - black                                   >=23.7. 0     # https://github.com/psf/black
+    - black                                   >=23.7.0      # https://github.com/psf/black
     - blosc                                   >=1.21.4      # https://github.com/Blosc/c-blosc
     - boa                                     >=0.15.1      # https://github.com/mamba-org/boa
     - bokeh                                   >=3.2.0       # https://github.com/bokeh/bokeh
@@ -133,7 +134,8 @@ requirements:
     - joblib                                  >=1.3.0       # https://github.com/joblib/joblib
     - jq                                      >=1.6         # https://github.com/conda-forge/jq-feedstock
     - jsonschema                              >=4.18.3      # https://github.com/Julian/jsonschema
-    - jupyter_app_launcher                    >=0.1.6       # https://github.com/conda-forge/jupyter_app_launcher-feedstock
+    # https://github.com/trungleduc/jupyter_app_launcher/issues/30
+    # [jupyter_server<2] - jupyter_app_launcher                    >=0.1.6       # https://github.com/conda-forge/jupyter_app_launcher-feedstock
     - jupyter-archive                         >=3.3.4       # https://github.com/jupyterlab-contrib/jupyter-archive
     - jupyter-dash                            >=0.4.2       # https://github.com/plotly/jupyter-dash
     - jupyter-fs                              >=0.3.1       # https://github.com/conda-forge/jupyter-fs-feedstock
@@ -177,7 +179,7 @@ requirements:
     - mkdocs-material                         >=9.1.18      # https://github.com/squidfunk/mkdocs-material
     - mkdocs-material-extensions              >=1.1.1       # https://github.com/facelessuser/mkdocs-material-extensions
     - mkdocstrings                            >=0.22.0      # https://github.com/mkdocstrings/mkdocstrings/
-    # [pip-only] - mknotebooks                >=0.7.1       # https://github.com/greenape/mknotebooks
+    - mknotebooks                             >=0.7.1       # https://github.com/greenape/mknotebooks
     - mkl                                     >=2022.2.1    # https://github.com/conda-forge/intel_repack-feedstock
     - mkl_fft                                 >=1.3.6       # https://github.com/conda-forge/mkl_fft-feedstock
     # py310 - mkl_random                      >=1.2.2       # https://github.com/conda-forge/mkl_random-feedstock
@@ -198,7 +200,7 @@ requirements:
     - nodejs                                  >=18.16.1     # https://github.com/conda-forge/nodejs-feedstock
     - notebook                                >=6.5.4       # https://github.com/jupyter/notebook
     - numba                                   >=0.57.1      # https://github.com/numba/numba
-    # [check] - numba-scipy                             >=0.3.1       # https://github.com/conda-forge/numba-scipy-feedstock
+    # [scipy<=1.11.0] - numba-scipy                             >=0.3.1       # https://github.com/conda-forge/numba-scipy-feedstock
     - numdifftools                            >=0.9.41      # https://github.com/pbrod/numdifftools
     - numexpr                                 >=2.7.3       # https://github.com/pydata/numexpr
     - numpy                                   >=1.23.5      # https://github.com/numpy/numpy
@@ -213,14 +215,13 @@ requirements:
     - outcome                                 >=1.2.0       # https://github.com/python-trio/outcome
     - packaging                               >=23.1        # https://github.com/pypa/packaging
     - pandas                                  >=2.0.3       # https://github.com/pandas-dev/pandas
-    - pandas-profiling                        >=3.6.3       # https://github.com/pandas-profiling/pandas-profiling
     - pandas-stubs                            >=2.0.2.230605 # https://github.com/conda-forge/pandas-stubs-feedstock
     - pandoc                                  >=3.1.3       # https://github.com/conda-forge/pandoc-feedstock
     - pandocfilters                           >=1.5.0       # https://github.com/jgm/pandocfilters
     - panel                                   >=1.2.0       # https://github.com/holoviz/panel
     - papermill                               >=2.3.4       # https://github.com/nteract/papermill
     - patsy                                   >=0.5.3       # https://github.com/pydata/patsy
-    - perspective                             >=2.2.1       # https://github.com/finos/perspective/
+    - perspective                             >=2.3.2       # https://github.com/finos/perspective/
     - pexpect                                 >=4.8.0       # https://github.com/pexpect/pexpect
     - pgcli                                   >=3.5.0       # https://github.com/dbcli/pgcli
     - phantomjs                               >=2.1.1       # https://github.com/ariya/phantomjs
@@ -255,7 +256,7 @@ requirements:
     - pytest-cov                              >=4.1.0       # https://github.com/pytest-dev/pytest-cov/
     - pytest-doctestplus                      >=0.13.0      # https://github.com/astropy/pytest-doctestplus
     - pytest-html                             >=3.2.0       # https://github.com/conda-forge/pytest-html-feedstock
-    - pytest-trio                             >=0.8.0       # https://github.com/conda-forge/pytest-trio-feedstock
+    # [trio >=0.22.0]- pytest-trio                             >=0.8.0       # https://github.com/conda-forge/pytest-trio-feedstock
     - python-blosc                            >=1.10.6      # https://github.com/Blosc/python-blosc
     - python-dateutil                         >=2.8.2       # https://github.com/dateutil/dateutil
     - python-duckdb                           >=0.8.1       # https://github.com/conda-forge/python-duckdb-feedstock
@@ -294,6 +295,7 @@ requirements:
     # py310 (pytorch) - skorch                >=0.11.0      # https://github.com/skorch-dev/skorch
     - smbprotocol                             >=1.10.1      # https://github.com/jborean93/smbprotocol
     - snowballstemmer                         >=2.2.0       # https://github.com/snowballstem/snowball
+    - solara                                  >=1.19.0      # https://github.com/conda-forge/solara-feedstock
     - spacy                                   >=3.6.0       # https://github.com/explosion/spaCy
     - sparse                                  >=0.14.0      # https://github.com/pydata/sparse
     - spyder-kernels                          >=2.4.4       # https://github.com/spyder-ide/spyder-kernels
@@ -330,9 +332,9 @@ requirements:
     - tree                                    >=2.1.1       # https://github.com/conda-forge/tree-feedstock
     - trio                                    >=0.21.0      # https://github.com/python-trio/trio
     - trio-typing                             >=0.8.0       # https://github.com/conda-forge/trio-typing-feedstock
-    - trio_asyncio                            >=0.12.0      # https://github.com/python-trio/trio-asyncio
+    - trio-asyncio                            >=0.12.0      # https://github.com/python-trio/trio-asyncio
     - trio-util                               >=0.7.0       # https://github.com/groove-x/trio-util
-    - tsfresh                                 >=0.20.0      # https://github.com/blue-yonder/tsfresh
+    # [numpy<1.24] - tsfresh                                 >=0.20.0      # https://github.com/blue-yonder/tsfresh
     - tslearn                                 >=0.6.1       # https://github.com/tslearn-team/tslearn/
     - turbodbc                                >=4.6.0       # https://github.com/tslearn-team/tslearn/
     - typing_extensions                       >=4.7.1       # https://github.com/python/typing/tree/master/typing_extensions
@@ -353,6 +355,7 @@ requirements:
     - xlsxwriter                              >=3.1.2       # https://github.com/jmcnamara/XlsxWriter
     - xskillscore                             >=0.0.24      # https://github.com/xarray-contrib/xskillscore
     - yarl                                    >=1.9.2       # https://github.com/aio-libs/yarl
+    # - ydata-profiling                         >=4.3.2       # https://github.com/conda-forge/ydata-profiling-feedstock
     - yellowbrick                             >=1.5         # https://github.com/DistrictDataLabs/yellowbrick
     - yq                                      >=3.2.2       # https://github.com/conda-forge/yq-feedstock
     - zlib                                    >=1.2.13      # https://github.com/conda-forge/zlib-feedstock
@@ -369,7 +372,6 @@ requirements:
   # - opencv                                 >=4.4.0     # https://github.com/opencv/opencv-python
   # [pystan/py310] - orbit-ml                               >=1.0.5     # https://github.com/uber/orbit
   # - pytorch-ignite                                   # https://github.com/pytorch/ignite
-  # - tensorflow                           >=2.2.0     # https://github.com/tensorflow/tensorflow
 
 test:
   commands:
